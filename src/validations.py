@@ -66,5 +66,11 @@ def validate_option():
             else:
                 print("Invalid option in the range of the options, please try again")
         except ValueError: print("Error, invalid option in the range of the options, please try again")
-            
-    
+def validate_studient_edit(studients):
+    amount_of_studients = len(studients)
+    while True:
+        studient_for_edit = int(input("Number of the studient  you want edit"))
+        if studient_for_edit in range (1,amount_of_studients):
+            break
+        else:
+            print("Enter a valid number of the studient what you want edit")

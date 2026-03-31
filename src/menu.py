@@ -1,4 +1,4 @@
-from  services import enter_new_studient,show_list_of_the_studients
+from  services import enter_new_studient,show_list_of_the_studients,shearch_studient,edit_information_of_the_studient
 from validations import validate_option
 
 # Create this list for in future i want expand this list and don't need use 1000 elifts :)
@@ -24,3 +24,7 @@ def menu (studients):
             enter_new_studient(studients)
         elif option == 2:
             show_list_of_the_studients(studients)
+        elif option == 3:
+            shearch_studient()
+        elif option == 4:
+            edit_information_of_the_studient(studients)

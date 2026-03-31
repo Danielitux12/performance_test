@@ -1,4 +1,4 @@
-from validations import validate_identification,new_studient,validate_age,validate_course,validate_status
+from validations import validate_identification,new_studient,validate_age,validate_course,validate_status,validate_studient_edit
 # Whit this funtion i show the user 2 options for the enter tipe of the status studient
 def show_options_status ():
     # Create this list for in future i want expand this list and use 1000 ilefts :)
@@ -34,3 +34,14 @@ def show_list_of_the_studients(studients):
             print(f"{numer_studient+1}. {i["identification"]} - {i["name"]} - {i["age"]} - {i["course"]} - {i["status"]}")
             numer_studient+=1
     else: print("\n""The list of the studients is empty""\n")
+def shearch_studient():
+    print("This options don't funtion in this moment :(")
+def edit_information_of_the_studient(studients):
+    amount_studients = len(studients)
+    if amount_studients > 0:
+        numer_studient = 0
+        print("\nSTUDIENTS\n")
+        for i in studients:
+            print(f"{numer_studient+1}. {i["identification"]} - {i["name"]} - {i["age"]} - {i["course"]} - {i["status"]}")
+            numer_studient+=1
+        studient_for_edit = validate_studient_edit()-1
