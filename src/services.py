@@ -71,8 +71,22 @@ def edit_information_of_the_student(students):
                 i["age"] = validate_age()
                 i["course"] = validate_course()
                 i["status"] = validate_status()
-                print("Student update successfully")
+                print("\nStudent update successfully")
                 found = True
                 break
         if not found: print("Not found")
     else: print("\n""The list of the studients is empty")
+
+def delete_student(students):
+    amount_students = len(students)
+    found = False
+    if amount_students > 0:
+        identification = validate_identification()
+        for i in students:
+            if i["identification"] == identification:
+                students.remove(i)
+                print("\nStudent deleted successfully")
+                found = True
+                break
+        if not found: print("Not found")
+    else: print("\nThe list of the studients is empty")

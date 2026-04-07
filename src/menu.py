@@ -1,6 +1,6 @@
-from  services import enter_new_student,show_list_of_the_students,shearch_student,edit_information_of_the_student,edit_information_of_the_student
+from  services import enter_new_student,show_list_of_the_students,shearch_student,edit_information_of_the_student,edit_information_of_the_student,delete_student
 from validations import validate_option
-# Create this list for in future i want expand this list and don't need use 1000 elifts :)
+
 def show_options():
     list_options = ({
         "Enter new student":"option1",
@@ -14,7 +14,7 @@ def show_options():
     for i in list_options:
         print(f"{count+1}. {i}")
         count+=1
-# Create this funtion for show the all options for the user use in this program                    
+                 
 def menu (students):
     while True:
         show_options()
@@ -28,6 +28,6 @@ def menu (students):
         elif option == 4:
             edit_information_of_the_student(students)
         elif option == 5:
-            print()
+            delete_student(students)
         elif option == 6:
             print("Thanks for using the program :)")
